@@ -11,14 +11,14 @@ img{display:block; border:0;}
     content:""; display:block; clear:both;
 }
 
-#wrap{width:1200px; height:700px; background:#eee;
+#wrap{width:1200px; height:700px; 
     margin: 0 auto;
 }
-header{height:100px; background:#eff;
+header{height:100px; 
     position: relative;
 }
 #slide{height:300px; background:#aff;}
-#content{height:200px; background:#cff;}
+#content{height:200px; }
 footer{height:100px; background:#ccc;}
 
 .logo{
@@ -83,6 +83,40 @@ section{
     border-bottom: 1px #333 solid;
 }
 
+/* 공지사항 */
+.notice a{
+    padding:0 10px; /* 380 - 20 > 360 */
+    line-height: 35px;
+    transition: .3s;
+    height: 35px; /* 자식이 float 해서 높이가 사라짐!! 해서 높이를 어거지로 넣어줌. 왜..클리어 픽스 각각 달기 귀찮아서... */
+}
+.notice a:hover{
+    background:#ffa;
+}
+.subject{
+    width:260px;
+    float: left;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.date{
+    width:100px;
+    float:left;
+    text-align: right;
+}
+
+/* 겔러리 */
+.gallery li{
+    padding:20px 0 20px 20px;
+    float: left;
+}
+.gallery a{transition: .3s;}
+.gallery a:hover{
+    opacity: .6;
+}
+
 .banner_img img{width:100px; height:100px;}/* 포토샵에서 100*100 만들어오기!! */
 
 .banner_img{
@@ -97,6 +131,81 @@ section{
     padding:20px;
 }
 
-.banner_text a{
+.huwon{
     text-align: right;    
+    line-height: 40px;
+    transition:.6s;
+}
+
+.huwon:hover{
+    color:dodgerblue;
+    font-weight: bold;
+}
+.banner a{transition:.6s;}
+.banner a:hover{
+    background:#eee;
+}
+
+/* footer */
+.copyright{
+    width:800px; 
+    height:100px;
+    float: left;
+    text-align: center;
+    padding:20px 0;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.family{
+    width:200px;
+    height: 100px;
+    float:left;
+    text-align: center;
+    padding:34px 0;
+}
+
+.family select{
+    height: 32px;
+    width:150px;
+}
+
+/* popup */
+#popup{
+    width:100%;
+    height:100vh;
+    background:rgba(0,0,0,.8);
+    position:absolute;
+    top:0; left:0;
+    z-index: 100;
+    display:none;
+}
+
+.popup_body{
+    width:40%; 
+    height:400px;
+    background:#fff;
+    border:3px #ccc solid;
+    border-radius: 10px;
+    position: absolute;
+
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);   
+    text-align: center;
+}
+
+.popup_body h3{
+    padding:20px;     
+}
+
+.popup_body p{
+    padding:20px;
+    font-size: 15px;
+    height: 200px; /* 닫기 버튼 높이 맞추기 위해!!! */
+    text-align: left;
+}
+
+.close{
+    width:120px;
+    line-height: 40px;    
 }
